@@ -86,10 +86,7 @@ const Navbar = () => {
           className="fixed inset-0 bg-opacity-40 z-30"
         />
       )}
-      {/* Bottom Gray Shade Effect */}
-      <div className="fixed left-0 bottom-0 w-full h-4 z-10 pointer-events-none">
-        <div className="w-full h-full bg-gradient-to-t from-gray-700/60 to-transparent"></div>
-      </div>
+
     </nav>
   );
 };
