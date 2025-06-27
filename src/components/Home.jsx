@@ -97,6 +97,7 @@ const Home = () => {
           showIndicators={false}
           infiniteLoop={false}
           emulateTouch={true}
+          swipeScrollTolerance={50}
           renderArrowPrev={() => (
             <button
               onClick={handlePrev}
@@ -239,6 +240,14 @@ const Home = () => {
           .carousel-arrow-btn:hover:not(:disabled) {
             background: gray;
             color: #fff;
+          }
+
+          @media (max-width: 768px) {
+            .carousel-root, .carousel .slide {
+              overflow: visible !important;
+              height: auto !important;
+              min-height: 0 !important;
+            }
           }
         `}</style>
       </section>
