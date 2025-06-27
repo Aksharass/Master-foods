@@ -84,7 +84,8 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <section id="home" className="relative w-full bg-white pt-16 pb-4 md:pt-20 md:pb-0 overflow-visible">
+      {/* Ensure no overflow property on section for proper scrolling */}
+      <section id="home" className="relative w-full bg-white pt-16 pb-4 md:pt-20 md:pb-0">
         <Particles init={particlesInit} options={particlesConfig} className="absolute inset-0 z-[-1] pointer-events-none" />
 
         <Carousel
