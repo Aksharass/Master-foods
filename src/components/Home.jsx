@@ -144,10 +144,10 @@ const Home = () => {
               </SwiperSlide>
             ))}
             {/* Custom navigation buttons */}
-            <button ref={prevRef} className="carousel-arrow-btn absolute top-1/2 left-2 z-10 p-2 bg-white rounded-full -translate-y-1/2" aria-label="Previous Slide">
+            <button ref={prevRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 left-2 z-10 p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300" aria-label="Previous Slide">
               &#8249;
             </button>
-            <button ref={nextRef} className="carousel-arrow-btn absolute top-1/2 right-2 z-10 p-2 bg-white rounded-full -translate-y-1/2" aria-label="Next Slide">
+            <button ref={nextRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 right-2 z-10 p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300" aria-label="Next Slide">
               &#8250;
             </button>
           </Swiper>
@@ -173,6 +173,28 @@ const Home = () => {
       <AboutSection />
       <WhatWeOffer />
       <Testimonials />
+        <style>{`
+          .carousel-arrow-btn.custom-swiper-arrow {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            font-size: 2.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            outline: none;
+            background: #fff;
+            color: #333;
+            transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+          }
+          .carousel-arrow-btn.custom-swiper-arrow:hover:not(:disabled) {
+            background: #555;
+            color: #fff;
+            transform: scale(1.12) translateY(-0.25rem);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+          }
+        `}</style>
     </div>
   );
 };
