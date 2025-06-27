@@ -20,6 +20,7 @@
     "react-responsive-carousel": "^3.2.21",
     "react-router-dom": "^7.6.2",
     "react-tsparticles": "^2.9.3",
+    "swiper": "^11.2.8",
     "tsparticles": "^2.9.3"
   },
   "devDependencies": {
