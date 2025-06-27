@@ -144,10 +144,10 @@ const Home = () => {
               </SwiperSlide>
             ))}
             {/* Custom navigation buttons */}
-            <button ref={prevRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 left-2 z-10 p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300" aria-label="Previous Slide">
+            <button ref={prevRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 left-2 z-10 p-1 sm:p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300 w-9 h-9 sm:w-14 sm:h-14 text-xl sm:text-3xl" aria-label="Previous Slide">
               &#8249;
             </button>
-            <button ref={nextRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 right-2 z-10 p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300" aria-label="Next Slide">
+            <button ref={nextRef} className="carousel-arrow-btn custom-swiper-arrow absolute top-1/2 right-2 z-10 p-1 sm:p-2 bg-white rounded-full -translate-y-1/2 transition-all duration-300 w-9 h-9 sm:w-14 sm:h-14 text-xl sm:text-3xl" aria-label="Next Slide">
               &#8250;
             </button>
           </Swiper>
@@ -176,9 +176,6 @@ const Home = () => {
         <style>{`
           .carousel-arrow-btn.custom-swiper-arrow {
             box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            font-size: 2.5rem;
-            width: 3.5rem;
-            height: 3.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
