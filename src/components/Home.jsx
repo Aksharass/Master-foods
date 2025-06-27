@@ -106,22 +106,24 @@ const Home = () => {
                     <h2 className="text-black text-2xl sm:text-3xl md:text-5xl font-bold">{s.title}</h2>
                     <h3 className="text-black text-lg sm:text-xl md:text-2xl">{s.subtitle}</h3>
                     <p className="text-gray-700 whitespace-pre-line text-sm sm:text-base">{s.description}</p>
-                    <div className="mt-4">
-                      <button
-                        onClick={s.ctaAction}
-                        className="inline-block px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 text-sm sm:text-base"
-                      >
-                        {s.ctaText}
-                      </button>
-                      {s.ctaSecondary && s.ctaSecondaryLink && (
-                        <Link
-                          to={s.ctaSecondaryLink}
-                          className="ml-2 px-4 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block text-sm sm:text-base"
+                    <div className="mt-4 pt-4 md:pt-0">
+                      <div className="flex justify-center items-center space-x-2 md:block md:space-x-0">
+                        <button
+                          onClick={s.ctaAction}
+                          className="px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 text-sm sm:text-base"
                         >
-                          {s.ctaSecondary}
-                        </Link>
-                      )}
-                      <div className="flex space-x-4 mt-4">
+                          {s.ctaText}
+                        </button>
+                        {s.ctaSecondary && s.ctaSecondaryLink && (
+                          <Link
+                            to={s.ctaSecondaryLink}
+                            className="px-4 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block text-sm sm:text-base md:ml-2 md:mt-0"
+                          >
+                            {s.ctaSecondary}
+                          </Link>
+                        )}
+                      </div>
+                      <div className="flex justify-center space-x-4 mt-4 md:justify-start">
                         <a href="https://www.facebook.com/profile.php?id=61558791071549" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                           <FaFacebookF className="text-lg sm:text-xl text-black transition-transform duration-300 hover:text-gray-700 hover:scale-110" />
                         </a>

@@ -16,8 +16,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white fixed w-full z-20 shadow-md">
-      <img src={logo} alt="Master Logo" className="h-12 px-4" />
+    <nav className="flex justify-between items-center px-6 py-3 bg-white fixed w-full z-20 shadow-md">
+      <img src={logo} alt="Master Logo" className="h-10 px-3" />
 
       {/* Desktop Menu */}
       <div className="hidden md:flex flex-1 justify-center">
@@ -33,7 +33,7 @@ const Navbar = () => {
               </Link>
 
               {idx < navItems.length - 1 && (
-                <span className="text-black select-none pl-10 pr-6">/</span>
+                <span className="text-black select-none pl-10 pr-3">/</span>
               )}
             </li>
           ))}
@@ -55,13 +55,13 @@ const Navbar = () => {
             : '-translate-y-full opacity-0'
         } transition-all duration-1500 ease-in-out shadow-md`}
       >
-        <div className="flex justify-between items-center p-4 border-b border-black/20">
+        <div className="flex justify-between items-center p-3 border-b border-black/20">
           <h2 className="text-lg font-semibold">Menu</h2>
           <button onClick={() => setIsSidebarOpen(false)} aria-label="Close Menu">
             <FaTimes className="text-xl text-white hover:text-gray-700 transition" />
           </button>
         </div>
-        <ul className="flex flex-col mt-6 font-semibold">
+        <ul className="flex flex-col mt-5 font-semibold">
           {navItems.map((item, idx) => (
             <li
               key={idx}
