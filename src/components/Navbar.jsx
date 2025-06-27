@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setIsSidebarOpen(true)} aria-label="Open Menu">
-          <FaBars className="text-2xl text-black hover:text-gray-500 transition" />
+          <FaBars className="text-2xl text-white hover:text-gray-500 transition" />
         </button>
       </div>
 
