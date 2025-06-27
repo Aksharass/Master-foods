@@ -84,7 +84,7 @@ const Home = () => {
 
   return (
     <div>
-      <section id="home" className="relative w-full min-h-screen pt-10 bg-white overflow-hidden">
+      <section id="home" className="relative w-full bg-white overflow-x-hidden overflow-y-auto min-h-[100vh] md:min-h-screen pt-6 pb-4 md:pt-10 md:pb-0">
         <Particles init={particlesInit} options={particlesConfig} className="absolute inset-0 z-0" />
 
         <Carousel
@@ -98,7 +98,7 @@ const Home = () => {
           renderArrowPrev={() => (
             <button
               onClick={handlePrev}
-              className={`carousel-arrow-btn absolute top-1/2 left-4 z-10 p-3 bg-white rounded-full ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`carousel-arrow-btn absolute top-1/2 left-2 z-10 p-2 bg-white rounded-full ${currentSlide === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
               aria-label="Previous Slide"
               disabled={currentSlide === 0}
             >
@@ -108,7 +108,7 @@ const Home = () => {
           renderArrowNext={() => (
             <button
               onClick={handleNext}
-              className={`carousel-arrow-btn absolute top-1/2 right-4 z-10 p-3 bg-white rounded-full ${currentSlide === slides.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`carousel-arrow-btn absolute top-1/2 right-2 z-10 p-2 bg-white rounded-full ${currentSlide === slides.length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
               aria-label="Next Slide"
               disabled={currentSlide === slides.length - 1}
             >
@@ -119,36 +119,37 @@ const Home = () => {
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-4 pt-16 pb-8 md:px-20 md:pt-0 md:pb-0 z-10 gap-6
-                md:h-[100vh] md:min-h-[600px]"
+              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-2 pt-4 pb-4 md:px-20 md:pt-0 md:pb-0 z-10 gap-4 md:h-[100vh] md:min-h-[600px]"
             >
               {/* Left Text */}
-              <div className={`md:col-span-6 space-y-4 text-left transition-all duration-700 ${i === currentSlide ? 'animate-slide-left' : 'opacity-0'}`}>
-                <h2 className="text-black text-3xl md:text-5xl font-bold animate-fade-in">{s.title}</h2>
-                <h3 className="text-black text-xl md:text-2xl animate-fade-in delay-200">{s.subtitle}</h3>
-                <p className="text-gray-700 whitespace-pre-line animate-fade-in delay-400">{s.description}</p>
+              <div className={`md:col-span-6 space-y-4 text-left transition-all duration-700 ${i === currentSlide ? 'animate-slide-left' : 'opacity-0'}`}
+                style={{ minHeight: 0 }}
+              >
+                <h2 className="text-black text-2xl sm:text-3xl md:text-5xl font-bold animate-fade-in">{s.title}</h2>
+                <h3 className="text-black text-lg sm:text-xl md:text-2xl animate-fade-in delay-200">{s.subtitle}</h3>
+                <p className="text-gray-700 whitespace-pre-line animate-fade-in delay-400 text-sm sm:text-base">{s.description}</p>
                 <div className="mt-4 animate-fade-in delay-600">
                   {/* 3. Use button instead of Link for scroll */}
                   <button
                     onClick={s.ctaAction}
-                    className="inline-block px-6 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105"
+                    className="inline-block px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 text-sm sm:text-base"
                   >
                     {s.ctaText}
                   </button>
                   {s.ctaSecondary && (
                     <Link
                       to={s.ctaSecondaryLink || "#"}
-                      className="ml-4 px-6 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block"
+                      className="ml-2 px-4 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block text-sm sm:text-base"
                     >
                       {s.ctaSecondary}
                     </Link>
                   )}
                   <div className="flex space-x-4 mt-4">
                     <a href="https://www.facebook.com/profile.php?id=61558791071549" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                      <FaFacebookF className="text-xl text-black transition-transform duration-300 hover:text-gray-700 hover:scale-110" />
+                      <FaFacebookF className="text-lg sm:text-xl text-black transition-transform duration-300 hover:text-gray-700 hover:scale-110" />
                     </a>
                     <a href="https://www.instagram.com/master_food_shop/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                      <FaInstagram className="text-xl text-black transition-transform duration-300 hover:text-gray-700 hover:scale-110" />
+                      <FaInstagram className="text-lg sm:text-xl text-black transition-transform duration-300 hover:text-gray-700 hover:scale-110" />
                     </a>
                   </div>
                 </div>
@@ -156,13 +157,12 @@ const Home = () => {
 
               {/* Right Image */}
               <div
-                className={`md:col-span-6 flex justify-center items-center transition-all duration-700 pt-10 ${i === currentSlide ? 'animate-slide-right' : 'opacity-0'
-                  } pb-8 md:pb-16`}
-            >
+                className={`md:col-span-6 flex justify-center items-center transition-all duration-700 pt-4 md:pt-10 ${i === currentSlide ? 'animate-slide-right' : 'opacity-0'} pb-4 md:pb-16`}
+              >
                 <img
                   src={s.image}
                   alt={s.title}
-                  className="w-11/12 max-w-[300px] sm:w-4/5 sm:max-w-full h-auto max-h-[40vh] sm:max-h-[60vh] md:max-h-[60vh] object-contain transition-transform duration-700 hover:scale-105 bg-white rounded-lg shadow-md"
+                  className="w-10/12 max-w-[220px] sm:w-4/5 sm:max-w-full h-auto max-h-[28vh] sm:max-h-[40vh] md:max-h-[60vh] object-contain transition-transform duration-700 hover:scale-105 bg-white rounded-lg shadow-md"
                 />
               </div>
             </div>
