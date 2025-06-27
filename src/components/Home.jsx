@@ -84,7 +84,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <section id="home" className="relative w-full bg-white min-h-[100vh] pt-16 pb-4 md:pt-20 md:pb-0">
+      <section id="home" className="relative w-full bg-white pt-16 pb-4 md:pt-20 md:pb-0">
         <Particles init={particlesInit} options={particlesConfig} className="absolute inset-0 z-0" />
 
         <Carousel
@@ -119,7 +119,7 @@ const Home = () => {
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-2 pt-4 pb-4 md:px-20 md:pt-0 md:pb-0 z-10 gap-4 md:h-[100vh] md:min-h-[600px]"
+              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-2 pt-4 pb-4 md:px-20 md:pt-0 md:pb-0 z-10 gap-4"
             >
               {/* Left Text */}
               <div className={`md:col-span-6 space-y-4 text-left transition-all duration-700 ${i === currentSlide ? 'animate-slide-left' : 'opacity-0'}`}
