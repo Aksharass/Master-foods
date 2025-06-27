@@ -98,6 +98,7 @@ const Home = () => {
           swipeScrollTolerance={60}
           preventMovementUntilSwipeScrollTolerance={true}
           swipeable={true}
+          dynamicHeight={true}
           renderArrowPrev={() => (
             <button
               onClick={handlePrev}
@@ -122,8 +123,9 @@ const Home = () => {
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-4 pt-6 pb-6 md:px-20 md:pt-10 md:pb-10 z-10 gap-4"
+              className={`relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-4 pt-6 pb-6 md:px-20 md:pt-10 md:pb-10 z-10 gap-4 ${i === currentSlide ? '' : 'hidden'}`}
             >
+              {/* Left Text */}
               <div className={`md:col-span-6 space-y-4 text-left transition-all duration-700 ${i === currentSlide ? 'animate-slide-left' : 'opacity-0'}`}
                 style={{ minHeight: 0 }}>
                 <h2 className="text-black text-2xl sm:text-3xl md:text-5xl font-bold animate-fade-in">{s.title}</h2>
@@ -155,6 +157,7 @@ const Home = () => {
                 </div>
               </div>
 
+              {/* Right Image */}
               <div className={`md:col-span-6 flex justify-center items-center transition-all duration-700 pt-4 md:pt-10 ${i === currentSlide ? 'animate-slide-right' : 'opacity-0'} pb-4 md:pb-16`}>
                 <img
                   src={s.image}
@@ -212,9 +215,6 @@ const Home = () => {
             outline: none;
           }
           .carousel-arrow-btn:hover:not(:disabled) { background: gray; color: #fff; }
-          @media (max-width: 768px) {
-            .carousel-root, .carousel .slide { overflow: visible !important; height: auto !important; min-height: 0 !important; }
-          }
         `}</style>
       </section>
 
