@@ -32,7 +32,7 @@ const InfoCard = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between bg-black text-white rounded-xl px-6 md:px-12 py-10 md:py-12 mt-10 md:mt-20 mx-4 md:mx-auto max-w-5xl shadow-lg gap-6">
+    <div className="flex flex-col md:flex-row items-center justify-between bg-black text-white rounded-xl px-6 md:px-12 py-10 md:py-12 mt-10 md:mt-20 mx-4 sm:mx-8 md:mx-16 lg:mx-32 xl:mx-auto max-w-5xl shadow-lg gap-6">
       <div className="text-left w-full md:w-1/3">
         <h2
           className={`text-xl md:text-2xl font-semibold transition-all duration-500 ${

@@ -11,7 +11,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="px-6 py-20 max-w-7xl mx-auto">
+    <section className="px-4 sm:px-8 md:px-16 lg:px-32 xl:px-0 py-20 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Image Section */}
         <motion_.div
