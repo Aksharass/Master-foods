@@ -83,8 +83,8 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <section id="home" className="relative w-full bg-white overflow-x-hidden overflow-y-auto min-h-[100vh] md:min-h-screen pt-6 pb-4 md:pt-10 md:pb-0">
+    <div className="overflow-x-hidden">
+      <section id="home" className="relative w-full bg-white min-h-[100vh] pt-16 pb-4 md:pt-20 md:pb-0">
         <Particles init={particlesInit} options={particlesConfig} className="absolute inset-0 z-0" />
 
         <Carousel
