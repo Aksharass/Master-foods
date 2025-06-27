@@ -96,6 +96,7 @@ const Home = () => {
           showIndicators={false}
           infiniteLoop={false}
           emulateTouch={false}
+          dynamicHeight={true}
           renderArrowPrev={() => (
             <button
               onClick={handlePrev}
@@ -120,7 +121,7 @@ const Home = () => {
           {slides.map((s, i) => (
             <div
               key={i}
-              className="relative min-h-[300px] grid grid-cols-1 md:grid-cols-12 items-center w-full px-2 pt-4 pb-4 md:px-20 md:pt-0 md:pb-0 z-10 gap-4"
+              className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-2 pt-4 pb-4 md:px-20 md:pt-0 md:pb-0 z-10 gap-4"
             >
               {/* Left Text */}
               <div className={`md:col-span-6 space-y-4 text-left transition-all duration-700 ${i === currentSlide ? 'animate-slide-left' : 'opacity-0'}`}
