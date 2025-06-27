@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Required for routing
-import logo from '../assets/logo.png';
+import logo from '../assets/footer.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-6 py-3 bg-white fixed w-full z-20 shadow-md">
+    <nav className="flex justify-between items-center px-6 py-3 bg-black bg-opacity-90 backdrop-blur-md fixed w-full z-20 shadow-md">
       <img src={logo} alt="Master Logo" className="h-10 px-3" />
 
       {/* Desktop Menu */}
@@ -26,14 +26,14 @@ const Navbar = () => {
             <li key={idx} className="flex items-center px-1">
               <Link
                 to={item.path}
-                className="relative text-black hover:text-gray-500 transition duration-300 group"
+                className="relative text-white hover:text-gray-500 transition duration-300 group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 h-[2px] bg-gray-500 w-0 group-hover:w-full transition-all duration-300 ease-in-out" />
               </Link>
 
               {idx < navItems.length - 1 && (
-                <span className="text-black select-none pl-5 pr-3">/</span>
+                <span className="text-white select-none pl-5 pr-3">/</span>
               )}
             </li>
           ))}
@@ -86,6 +86,10 @@ const Navbar = () => {
           className="fixed inset-0 bg-opacity-40 z-30"
         />
       )}
+      {/* Bottom Gray Shade Effect */}
+      <div className="fixed left-0 bottom-0 w-full h-4 z-10 pointer-events-none">
+        <div className="w-full h-full bg-gradient-to-t from-gray-700/60 to-transparent"></div>
+      </div>
     </nav>
   );
 };
