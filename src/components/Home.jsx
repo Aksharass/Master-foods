@@ -79,7 +79,26 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <section id="home" className="relative w-full bg-white pt-16 pb-4 md:pt-20 md:pb-0">
+      <section id="home" className="relative w-full bg-white pt-16 pb-4 md:pt-20 md:pb-0 group">
+        {/* Animated balls background */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          {/* Diagonal Ball 1 */}
+          <div className="absolute rounded-full bg-gray-300 opacity-60 animate-[moveDiag1_14s_linear_infinite]" style={{width:'32px',height:'32px',left:'5%',top:'10%'}}></div>
+          {/* Diagonal Ball 2 */}
+          <div className="absolute rounded-full bg-gray-400 opacity-40 animate-[moveDiag2_18s_linear_infinite]" style={{width:'40px',height:'40px',left:'80%',top:'15%'}}></div>
+          {/* Circular Ball 3 */}
+          <div className="absolute rounded-full bg-gray-200 opacity-50 animate-[moveCircle_20s_linear_infinite]" style={{width:'24px',height:'24px',left:'60%',top:'60%'}}></div>
+          {/* Zigzag Ball 4 */}
+          <div className="absolute rounded-full bg-gray-400 opacity-30 animate-[moveZigzag_16s_linear_infinite]" style={{width:'28px',height:'28px',left:'30%',top:'80%'}}></div>
+          {/* Diagonal Ball 5 */}
+          <div className="absolute rounded-full bg-gray-300 opacity-50 animate-[moveDiag3_22s_linear_infinite]" style={{width:'18px',height:'18px',left:'50%',top:'30%'}}></div>
+          {/* Small Circle Ball 6 */}
+          <div className="absolute rounded-full bg-gray-300 opacity-40 animate-[moveCircle_11s_linear_infinite]" style={{width:'10px',height:'10px',left:'20%',top:'70%'}}></div>
+          {/* Small Zigzag Ball 7 */}
+          <div className="absolute rounded-full bg-gray-400 opacity-30 animate-[moveZigzag_13s_linear_infinite]" style={{width:'12px',height:'12px',left:'85%',top:'40%'}}></div>
+          {/* Small Diagonal Ball 8 */}
+          <div className="absolute rounded-full bg-gray-200 opacity-30 animate-[moveDiag2_15s_linear_infinite]" style={{width:'14px',height:'14px',left:'70%',top:'75%'}}></div>
+        </div>
         <Particles init={particlesInit} options={particlesConfig} className="absolute inset-0 z-[-1] pointer-events-none" />
 
         {/* Swiper with navigation */}
@@ -102,10 +121,14 @@ const Home = () => {
               <SwiperSlide key={i}>
                 <div className="relative grid grid-cols-1 md:grid-cols-12 items-center w-full px-4 pt-6 pb-6 md:px-20 md:pt-10 md:pb-10 z-10 gap-4">
                   {/* Left Text */}
-                  <div className="md:col-span-6 space-y-4 text-left">
-                    <h2 className="text-black text-2xl sm:text-3xl md:text-5xl font-bold">{s.title}</h2>
-                    <h3 className="text-black text-lg sm:text-xl md:text-2xl">{s.subtitle}</h3>
-                    <p className="text-gray-700 whitespace-pre-line text-sm sm:text-base">{s.description}</p>
+                  <div
+                    className={`md:col-span-6 space-y-4 text-left transition-transform duration-700 ease-out
+                      ${currentSlide === i ? 'animate-[floatY_3s_ease-in-out_infinite]' : 'opacity-0'}
+                      hover:scale-105`}
+                  >
+                    <h2 className="text-black text-2xl sm:text-3xl md:text-5xl font-bold transition-colors duration-300 hover:text-gray-900 animate-fadeInText">{s.title}</h2>
+                    <h3 className="text-black text-lg sm:text-xl md:text-2xl transition-colors duration-300 hover:text-gray-800 animate-fadeInText">{s.subtitle}</h3>
+                    <p className="text-gray-700 whitespace-pre-line text-sm sm:text-base transition-colors duration-300 hover:text-gray-900 animate-fadeInText">{s.description}</p>
                     <div className="mt-4 pt-4 md:pt-0">
                       <div className="flex justify-center items-center space-x-2 md:block md:space-x-0">
                         <button
@@ -135,7 +158,10 @@ const Home = () => {
                   </div>
 
                   {/* Right Image */}
-                  <div className="md:col-span-6 flex justify-center items-center pt-4 md:pt-10 pb-4 md:pb-16">
+                  <div
+                    className={`md:col-span-6 flex justify-center items-center pt-4 md:pt-10 pb-4 md:pb-16 transition-transform duration-700 ease-out
+                      ${currentSlide === i ? 'animate-slideInUp' : 'opacity-0 translate-y-8'}`}
+                  >
                     <img
                       src={s.image}
                       alt={s.title}
@@ -192,6 +218,95 @@ const Home = () => {
             color: #fff;
             transform: scale(1.12) translateY(-0.25rem);
             box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+          }
+
+          @keyframes flipIn {
+            0% {
+              opacity: 0;
+              transform: rotateY(-60deg) scale(0.95);
+            }
+            100% {
+              opacity: 1;
+              transform: rotateY(0deg) scale(1);
+            }
+          }
+          .animate-flipIn {
+            animation: flipIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+
+          @keyframes pulseCustom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+          }
+          .hover\:animate-pulseCustom:hover, .animate-pulseCustom:hover {
+            animation: pulseCustom 0.5s linear both;
+          }
+
+          @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          .animate-fadeInText {
+            animation: fadeInText 1s ease both;
+          }
+
+          @keyframes slideInUp {
+            0% {
+              opacity: 0;
+              transform: translateY(40px) scale(0.97);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+          .animate-slideInUp {
+            animation: slideInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+
+          @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+          }
+          @keyframes moveDiag1 {
+            0% { transform: translate(0, 0);}
+            25% { transform: translate(60vw, 20vh);}
+            50% { transform: translate(30vw, 60vh);}
+            75% { transform: translate(-10vw, 30vh);}
+            100% { transform: translate(0, 0);}
+          }
+          @keyframes moveDiag2 {
+            0% { transform: translate(0, 0);}
+            20% { transform: translate(-30vw, 30vh);}
+            50% { transform: translate(-60vw, 60vh);}
+            80% { transform: translate(-20vw, 10vh);}
+            100% { transform: translate(0, 0);}
+          }
+          @keyframes moveDiag3 {
+            0% { transform: translate(0, 0);}
+            30% { transform: translate(10vw, 40vh);}
+            60% { transform: translate(-10vw, 60vh);}
+            100% { transform: translate(0, 0);}
+          }
+          @keyframes moveCircle {
+            0% { transform: translate(0, 0);}
+            25% { transform: translate(20px, 40px);}
+            50% { transform: translate(0, 80px);}
+            75% { transform: translate(-20px, 40px);}
+            100% { transform: translate(0, 0);}
+          }
+          @keyframes moveZigzag {
+            0% { transform: translate(0, 0);}
+            20% { transform: translate(30px, 20px);}
+            40% { transform: translate(-20px, 40px);}
+            60% { transform: translate(20px, 60px);}
+            80% { transform: translate(-10px, 80px);}
+            100% { transform: translate(0, 0);}
+          }
+          @keyframes moveBall5 {
+            0% { transform: translateY(0) scale(1);}
+            50% { transform: translateY(-20px) scale(1.08);}
+            100% { transform: translateY(0) scale(1);}
           }
         `}</style>
     </div>

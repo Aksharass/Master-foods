@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="hidden md:flex flex-1 justify-center">
         <ul className="flex font-semibold">
           {navItems.map((item, idx) => (
-            <li key={idx} className="flex items-center px-3">
+            <li key={idx} className="flex items-center px-1">
               <Link
                 to={item.path}
                 className="relative text-black hover:text-gray-500 transition duration-300 group"
@@ -33,7 +33,7 @@ const Navbar = () => {
               </Link>
 
               {idx < navItems.length - 1 && (
-                <span className="text-black select-none pl-10 pr-3">/</span>
+                <span className="text-black select-none pl-5 pr-3">/</span>
               )}
             </li>
           ))}
