@@ -5,8 +5,8 @@ const PageNotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-2 sm:px-4 bg-transparent overflow-hidden">
-      <div className="text-center p-6 sm:p-12 bg-white rounded-xl max-w-lg w-full border border-gray-100 shadow-lg">
+    <div className="h-screen flex items-center justify-center bg-transparent overflow-y-auto">
+      <div className="text-center p-4 sm:p-8 bg-white rounded-xl max-w-lg w-full border border-gray-100 shadow-lg">
         <h1 className="text-6xl sm:text-7xl font-extrabold text-black mb-2 animate-bounce">
           404
         </h1>
