@@ -66,7 +66,7 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10">
         {/* Text Section */}
         <_motion.div
           className="w-full md:w-3/5 text-left px-4 sm:px-8 md:px-20"
@@ -116,7 +116,7 @@ const AboutUs = () => {
               <_motion.div
                 whileHover={{
                   scale: 1.08,
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
                   transition: { duration: 0.3 },
                 }}
                 className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
@@ -127,7 +127,7 @@ const AboutUs = () => {
               <_motion.div
                 whileHover={{
                   scale: 1.08,
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
                   transition: { duration: 0.3 },
                 }}
                 className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
@@ -138,7 +138,7 @@ const AboutUs = () => {
               <_motion.div
                 whileHover={{
                   scale: 1.08,
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
                   transition: { duration: 0.3 },
                 }}
                 className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
@@ -158,17 +158,17 @@ const AboutUs = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative w-60 sm:w-70 md:w-100 h-60 sm:h-70 md:h-100">
+          <div className="relative w-70 md:w-90 h-70 md:h-90">
             <div
               className="absolute inset-0 rounded-xl bg-cover bg-center"
               style={{ backgroundImage: `url(${aboutusImg})` }}
               aria-label="Master Batter"
             />
             <AnimatePresence>
-              {(isHovered || window.innerWidth < 640) && (
+              {isHovered && (
                 <>
                   <_motion.div
-                    className="absolute top-4 left-4 right-4 sm:right-40 bg-white shadow-md rounded-md px-3 py-1 text-sm text-black-600 font-medium"
+                    className="absolute top-4 left-4 right-40 bg-white shadow-md rounded-md px-3 py-1 text-sm text-black-600 font-medium"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
@@ -177,7 +177,7 @@ const AboutUs = () => {
                     100% Natural & Fresh
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-24 sm:bottom-38 left-4 sm:left-50 right-2 bg-white shadow-md rounded-md p-2 text-xs text-black-600"
+                    className="absolute bottom-38 left-50 right-2 bg-white shadow-md rounded-md p-2 text-xs text-black-600"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
@@ -186,7 +186,7 @@ const AboutUs = () => {
                     Loved by 10,000+ Home Chefs
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-4 right-4 sm:right-40 left-4 sm:left-2 flex items-center gap-2 bg-white shadow px-4 py-1 rounded-md text-xs"
+                    className="absolute bottom-1 right-40 bottom-4 left-2 flex items-center gap-2 bg-white shadow px-4 py-1 rounded-md text-xs"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
