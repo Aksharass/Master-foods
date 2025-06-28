@@ -36,13 +36,13 @@ const OrderProduct = () => {
               </div>
 
               <div className="flex gap-4 sm:gap-6 justify-center md:justify-start mt-3 sm:mt-4">
-                <a href="https://facebook.com/yourmasterlink" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#4267B2] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
+                <a href="https://www.facebook.com/profile.php?id=61558791071549" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#4267B2] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
                   <FaFacebookF />
                 </a>
-                <a href="https://instagram.com/yourmasterlink" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#E1306C] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
+                <a href="https://www.instagram.com/master_food_shop/?hl=en" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#E1306C] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
                   <FaInstagram />
                 </a>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#25D366] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
+                <a href="https://wa.me/917708325357" target="_blank" rel="noopener noreferrer" className="text-black hover:text-[#25D366] text-2xl sm:text-3xl transition-transform hover:scale-110 hover:drop-shadow">
                   <FaWhatsapp />
                 </a>
               </div>
