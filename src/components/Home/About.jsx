@@ -108,7 +108,7 @@ const AboutSection = () => {
           {/* Toggle Button */}
           <button
             onClick={handleToggle}
-            className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition duration-300 mb-8"
+            className="px-6 py-2 bg-black text-white rounded hover:bg-gray-800 transition duration-300 mb-8 block sm:inline mx-auto sm:mx-0"
           >
             {showMore ? 'READ LESS' : 'READ MORE'}
           </button>
