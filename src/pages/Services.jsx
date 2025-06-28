@@ -211,16 +211,16 @@ const Services = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h4 className="text-lg font-semibold text-black mb-2 pl-2 sm:pl-0">Delivery Areas</h4>
-              <p className="text-sm text-gray-700 mb-4 pl-2 sm:pl-0">
+              <h4 className="text-lg font-semibold text-black mb-2 pl-4 md:pl-8 lg:pl-12 xl:pl-16">Delivery Areas</h4>
+              <p className="text-sm text-gray-700 mb-4 pl-4 md:pl-8 lg:pl-12 xl:pl-16">
                 We currently deliver fresh batter to the following areas in Kanyakumari and Thiruvananthapuram:
               </p>
               <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {deliveryAreas.map((area, idx) => (
                   <motion_.div
                     key={idx}
-                    className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-1 lg:col-span-1 flex justify-center items-center' : ''}`}
-                    style={idx === deliveryAreas.length - 1 ? { minWidth: '100%' } : {}}
+                    className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-2 lg:col-span-1 flex justify-center items-center' : ''}`}
+                    style={idx === deliveryAreas.length - 1 ? { width: '100%' } : {}}
                     variants={areaVariants}
                     initial="initial"
                     whileInView="animate"
