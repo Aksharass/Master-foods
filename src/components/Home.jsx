@@ -154,14 +154,14 @@ const Home = () => {
                       <div className="flex justify-center items-center space-x-2 md:block md:space-x-0">
                         <button
                           onClick={s.ctaAction}
-                          className="px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 text-sm sm:text-base"
+                          className="px-4 py-2 bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-700 hover:scale-105 text-base sm:text-base"
                         >
                           {s.ctaText}
                         </button>
                         {s.ctaSecondary && s.ctaSecondaryLink && (
                           <Link
                             to={s.ctaSecondaryLink}
-                            className="px-4 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block text-sm sm:text-base md:ml-2 md:mt-0"
+                            className="px-4 py-2 border border-black text-black rounded-lg transition-all duration-300 hover:bg-gray-200 hover:scale-105 inline-block text-base sm:text-base md:ml-2 md:mt-0"
                           >
                             {s.ctaSecondary}
                           </Link>

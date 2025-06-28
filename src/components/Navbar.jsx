@@ -33,7 +33,7 @@ const Navbar = () => {
               </Link>
 
               {idx < navItems.length - 1 && (
-                <span className="text-black select-none pl-5 pr-3">/</span>
+                <span className="text-black select-none pl-5 pr-1">/</span>
               )}
             </li>
           ))}
