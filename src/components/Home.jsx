@@ -82,7 +82,7 @@ const Home = () => {
       {/* Carousel Section */}
       <section id="home" className="relative w-full bg-white pb-4 pt-8 sm:pt-20 md:pb-0 group px-3 sm:px-0">
         {/* Master Heading and Single Animated Standard Point - with background animation */}
-        <div className="relative w-full flex flex-col items-center justify-center z-10 overflow-hidden pt-8 pb-6 sm:pt-0 sm:pb-2 md:pt-0 md:pb-2">
+        <div className="relative w-full flex flex-col items-center justify-center z-10 overflow-hidden pt-12 pb-10 sm:pt-4 sm:pb-4 md:pt-4 md:pb-4 lg:pt-4 lg:pb-4">
           {/* Animated balls background for Master content */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <div className="absolute rounded-full bg-gray-300 opacity-60 animate-[moveDiag1_14s_linear_infinite]" style={{width:'32px',height:'32px',left:'5%',top:'10%'}}></div>
@@ -94,7 +94,7 @@ const Home = () => {
             <div className="absolute rounded-full bg-gray-400 opacity-30 animate-[moveZigzag_13s_linear_infinite]" style={{width:'12px',height:'12px',left:'85%',top:'40%'}}></div>
             <div className="absolute rounded-full bg-gray-200 opacity-30 animate-[moveDiag2_15s_linear_infinite]" style={{width:'14px',height:'14px',left:'70%',top:'75%'}}></div>
           </div>
-          <h1 className="relative z-10 text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-2 drop-shadow-md animate-fadeInText" style={{ fontFamily: 'Times New Roman, Times, serif' }}>Master</h1>
+          <h1 className="relative z-10 text-4xl sm:text-4xl md:text-5xl font-extrabold text-black mb-2 drop-shadow-md animate-fadeInText" style={{ fontFamily: 'Times New Roman, Times, serif' }}>Master</h1>
           <div className="relative z-10 max-w-2xl text-center">
             <p className="text-base sm:text-lg text-gray-700 animate-slideInUp">
               Fresh, preservative-free South Indian batters made daily with authentic recipes and natural ingredients.
