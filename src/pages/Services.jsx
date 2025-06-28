@@ -101,36 +101,36 @@ const Services = () => {
         </p>
       </div>
 
-      <section className="py-10 sm:py-16 bg-white text-center" id="services">
-        <div className="container mx-auto px-2 sm:px-4 max-w-6xl">
+      <section className="py-16 bg-white text-center" id="services">
+        <div className="container mx-auto px-4 max-w-6xl">
           {/* Added heading and content */}
-          <h2 className="text-2xl sm:text-4xl font-bold mb-2 text-black">What We Offer</h2>
-          <p className="text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto text-base sm:text-lg">
+          <h2 className="text-4xl font-bold mb-2 text-black">What We Offer</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Explore our range of services designed to meet the needs of households, restaurants, and retailers. 
             From fast delivery to custom orders, we ensure quality and satisfaction every step of the way.
           </p>
-          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion_.div
                 key={index}
-                className="bg-white shadow-md border rounded-lg p-4 hover:shadow-2xl transition-all duration-300 group cursor-pointer flex flex-col items-center min-h-[180px]"
+                className="bg-white shadow-md border rounded-lg p-4 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                 initial={{ opacity: 0, y: 40, scale: 0.95, rotate: -3 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                 whileHover={{
                   scale: 1.07,
                   rotate: 2,
-                  boxShadow: '0 12px 32px rgba(0,0,0,0.18)',
-                  backgroundColor: '#f3f4f6',
-                  borderColor: '#4b5563',
+                  boxShadow: "0 12px 32px rgba(0,0,0,0.18)",
+                  backgroundColor: "#f3f4f6",
+                  borderColor: "#4b5563",
                   transition: { duration: 0.35 },
                 }}
-                transition={{ duration: 0.5, delay: index * 0.1, type: 'spring', stiffness: 120 }}
+                transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 120 }}
               >
                 <div className="flex items-center justify-center h-12 w-12 bg-gray-300 text-black rounded-full mx-auto mb-3 group-hover:bg-gray-800 group-hover:text-white transition-colors duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold mb-1 text-gray-900 group-hover:text-gray-600 transition-colors duration-300">{service.title}</h3>
-                <p className="text-gray-700 text-xs sm:text-sm group-hover:text-gray-900 transition-colors duration-300">{service.desc}</p>
+                <h3 className="text-lg font-semibold mb-1 text-gray-900 group-hover:text-gray-600 transition-colors duration-300">{service.title}</h3>
+                <p className="text-gray-700 text-xs group-hover:text-gray-900 transition-colors duration-300">{service.desc}</p>
               </motion_.div>
             ))}
           </div>
@@ -138,10 +138,10 @@ const Services = () => {
       </section>
 
       {/* Trusted Community Section */}
-      <section className="px-2 sm:px-4">
-        <div className="max-w-7xl mx-auto text-center p-4 sm:p-8 md:p-16 ">
+      <section className="px-4">
+        <div className="max-w-7xl mx-auto text-center p-8 md:p-16 ">
           <motion_.h2
-            className="text-xl sm:text-3xl md:text-5xl pb-3 sm:pb-5 font-bold text-black mb-2 sm:mb-4"
+            className="text-3xl md:text-5xl pb-5 font-bold text-black mb-4"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -149,7 +149,7 @@ const Services = () => {
             Trusted by Our Community
           </motion_.h2>
           <motion_.p
-            className="text-gray-700 mb-6 sm:mb-10 text-sm sm:text-base"
+            className="text-gray-700 mb-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -160,11 +160,11 @@ const Services = () => {
           </motion_.p>
 
           {/* Statistics */}
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-8 sm:mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-center mb-12">
             {stats.map((stat, idx) => (
               <motion_.div
                 key={idx}
-                className="flex-1 min-w-[120px] max-w-[180px] bg-gray-200 rounded-lg py-4 sm:py-6 hover:bg-gray-300 transition-colors duration-300 shadow-sm cursor-pointer mx-1"
+                className="bg-gray-200 rounded-lg py-6 hover:bg-gray-300 transition-colors duration-300 shadow-sm cursor-pointer"
                 variants={statVariants}
                 initial="initial"
                 whileInView="animate"
@@ -172,25 +172,25 @@ const Services = () => {
                 transition={{ duration: 0.5, delay: idx * 0.15 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-lg sm:text-2xl font-bold text-black">{stat.value}</h3>
-                <p className="text-xs sm:text-sm text-gray-800">{stat.label}</p>
+                <h3 className="text-2xl font-bold text-black">{stat.value}</h3>
+                <p className="text-sm text-gray-800">{stat.label}</p>
               </motion_.div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-stretch w-full">
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
             <motion_.div
-              className="bg-black text-white p-5 sm:p-8 rounded-xl w-full sm:max-w-xs shadow-md mb-4 sm:mb-0 flex-shrink-0"
+              className="bg-black text-white p-8 rounded-xl w-full lg:max-w-sm shadow-md flex flex-col items-center"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h4 className="text-base sm:text-lg font-bold mb-1 sm:mb-1">Why Choose Master?</h4>
-              <ul className="space-y-2 sm:space-y-1 text-xs sm:text-sm">
+              <h4 className="text-lg font-bold mb-4 text-center w-full">Why Choose Master?</h4>
+              <ul className="space-y-3 text-sm">
                 {reasons.map((reason, idx) => (
                   <motion_.li
                     key={idx}
-                    className="flex items-center gap-2 px-2 sm:px-3 py-2 cursor-pointer transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 cursor-pointer transition-colors"
                     variants={reasonVariants}
                     initial="initial"
                     whileInView="animate"
@@ -206,20 +206,20 @@ const Services = () => {
             </motion_.div>
 
             <motion_.div
-              className="flex-1 w-full"
+              className="flex-1"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h4 className="text-base sm:text-lg font-semibold text-black mb-1 sm:mb-2">Delivery Areas</h4>
-              <p className="text-xs sm:text-sm text-gray-700 mb-2 sm:mb-4">
+              <h4 className="text-lg font-semibold text-black mb-2">Delivery Areas</h4>
+              <p className="text-sm text-gray-700 mb-4">
                 We currently deliver fresh batter to the following areas in Kanyakumari and Thiruvananthapuram:
               </p>
-              <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
                 {deliveryAreas.map((area, idx) => (
                   <motion_.div
                     key={idx}
-                    className="bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-2 sm:px-4 py-2 rounded text-xs sm:text-sm font-medium shadow-sm cursor-pointer text-center"
+                    className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-1 lg:col-span-1 flex justify-center' : ''}`}
                     variants={areaVariants}
                     initial="initial"
                     whileInView="animate"
@@ -233,7 +233,7 @@ const Services = () => {
               </div>
 
               <motion_.div
-                className="mt-4 sm:mt-6 border border-black-300 text-red-700 text-xs sm:text-sm p-3 sm:p-4 rounded shadow-sm"
+                className="mt-6 border border-black-300 text-red-700 text-sm p-4 rounded shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
