@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import kumari from "../../assets/kumarifoodie.jpg";
 import master from "../../assets/ordermaster.png";
+import Footer from "../Footer";
 
 const OrderProduct = () => {
   const handleDownloadRedirect = () => {
@@ -12,7 +13,7 @@ const OrderProduct = () => {
   };
 
   return (
-    <div className="flex flex-col  bg-white">
+    <div className="flex flex-col min-h-screen bg-white">
       <div className="text-center pt-20 pb-6 sm:pt-30 sm:pb-10 bg-black text-white">
         <h1 className="text-3xl sm:text-4xl font-bold">Order Our Products</h1>
         <p className="mt-3 sm:mt-4 text-base sm:text-lg max-w-2xl mx-auto">
@@ -133,8 +134,7 @@ const OrderProduct = () => {
           </div>
         </div>
       </div>
-      {/* If you have a Footer component, place it here to keep it at the bottom */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
