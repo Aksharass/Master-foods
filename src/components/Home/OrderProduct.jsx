@@ -2,7 +2,6 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import kumari from "../../assets/kumarifoodie.jpg";
 import master from "../../assets/ordermaster.png";
-import Footer from "../Footer";
 
 const OrderProduct = () => {
   const handleDownloadRedirect = () => {
@@ -13,15 +12,15 @@ const OrderProduct = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
-      <div className="text-center pt-16 pb-4 sm:pt-24 sm:pb-8 bg-black text-white">
+    <div className="flex flex-col  bg-white">
+      <div className="text-center pt-20 pb-6 sm:pt-30 sm:pb-10 bg-black text-white">
         <h1 className="text-3xl sm:text-4xl font-bold">Order Our Products</h1>
-        <p className="mt-2 sm:mt-3 text-base sm:text-lg max-w-2xl mx-auto">
+        <p className="mt-3 sm:mt-4 text-base sm:text-lg max-w-2xl mx-auto">
           Order our delicious South Indian dishes easily through direct contact or the Kumari Foodie App for fast and convenient delivery.
         </p>
       </div>
-      <div className="flex-1 px-2 sm:px-8 md:px-16 lg:px-24 flex flex-col justify-start">
-        <div className="py-2 sm:py-3 animate-fadeIn flex flex-col justify-start">
+      <div className="flex-1 px-2 sm:px-8 md:px-16 lg:px-24 flex flex-col">
+        <div className="py-4 sm:py-6 animate-fadeIn flex flex-col justify-start">
           {/* Section 1: Master Contact */}
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-10 bg-white p-2 sm:p-4 rounded-2xl shadow-md animate-slide-in-left">
             <div className="flex-1 text-center md:text-left">
@@ -134,7 +133,8 @@ const OrderProduct = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* If you have a Footer component, place it here to keep it at the bottom */}
+      {/* <Footer /> */}
     </div>
   );
 };
