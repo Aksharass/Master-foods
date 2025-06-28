@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // ✅ Required for routing
 import logo from '../assets/footer.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isSidebarOpen]);
 
   const navItems = [
     { label: 'Home', path: '/' },
@@ -81,7 +70,7 @@ const Navbar = () => {
               <Link
                 to={item.path}
                 onClick={() => setIsSidebarOpen(false)}
-                className="block w-full text-center text-white text-base hover:text-gray-700"
+                className="block w-full text-center text-white hover:text-gray-700"
               >
                 {item.label}
               </Link>
@@ -94,7 +83,7 @@ const Navbar = () => {
       {isSidebarOpen && (
         <div
           onClick={() => setIsSidebarOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-40 z-30"
+          className="fixed inset-0 bg-opacity-40 z-30"
         />
       )}
     </nav>
