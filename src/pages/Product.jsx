@@ -24,12 +24,12 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="bg-white px-6 md:py-4 space-y-32">
+      <div className="bg-white px-2 md:px-6 md:py-4 space-y-24 md:space-y-32">
 
         {/* ======= DOSA / IDLY BATTER PROMO ======= */}
-        <div className="md:flex items-center gap-14 md:gap-20 px-4 md:px-16">
+        <div className="md:flex items-center gap-6 md:gap-10 lg:gap-20 px-2 md:px-8 lg:px-16">
           <_motion.div
-            className="md:w-1/2 p-6"
+            className="md:w-3/5 p-4 md:p-6"
             {...fadeInUp}
           >
             <_motion.h2
@@ -103,7 +103,7 @@ const Products = () => {
           <_motion.img
             src={dosaImg}
             alt="Dosa Batter"
-            className="w-124 h-114 md:w-124 md:h-114 mt-10 md:mt-0 rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 object-contain"
+            className="w-full max-w-xs md:max-w-sm lg:max-w-md h-auto mt-8 md:mt-0 rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 object-contain md:w-2/5"
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
@@ -112,9 +112,9 @@ const Products = () => {
         </div>
 
         {/* ======= APPAM BATTER PROMO ======= */}
-        <div className="md:flex md:flex-row-reverse items-center gap-14 md:gap-20 px-4 md:px-16">
+        <div className="md:flex md:flex-row-reverse items-center gap-6 md:gap-10 lg:gap-20 px-2 md:px-8 lg:px-16">
           <_motion.div
-            className="md:w-1/2 p-6"
+            className="md:w-3/5 p-4 md:p-6"
             {...fadeInUp}
           >
             <_motion.h2
@@ -188,7 +188,7 @@ const Products = () => {
           <_motion.img
             src={appamImg}
             alt="Appam Batter"
-            className="w-124 h-114 md:w-124 md:h-114 mt-10 md:mt-0 rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 object-contain"
+            className="w-full max-w-xs md:max-w-sm lg:max-w-md h-auto mt-8 md:mt-0 rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 object-contain md:w-2/5"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
