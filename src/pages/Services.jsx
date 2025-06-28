@@ -185,8 +185,8 @@ const Services = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h4 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Why Choose Master?</h4>
-              <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
+              <h4 className="text-base sm:text-lg font-bold mb-1 sm:mb-1">Why Choose Master?</h4>
+              <ul className="space-y-2 sm:space-y-1 text-xs sm:text-sm">
                 {reasons.map((reason, idx) => (
                   <motion_.li
                     key={idx}
