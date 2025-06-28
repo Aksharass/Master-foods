@@ -151,14 +151,14 @@ const AboutUs = () => {
         </_motion.div>
         {/* Image Section */}
         <_motion.div
-          className="relative w-full md:w-2/5 flex justify-center mt-8 md:mt-0 pr-4 md:pr-10"
+          className="relative w-full md:w-2/5 flex justify-center mt-8 md:mt-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative w-70 md:w-90 h-70 md:h-90">
+          <div className="relative w-70 md:w-80 h-70 md:h-80">
             <div
               className="absolute inset-0 rounded-xl bg-cover bg-center"
               style={{ backgroundImage: `url(${aboutusImg})` }}
@@ -167,8 +167,9 @@ const AboutUs = () => {
             <AnimatePresence>
               {isHovered && (
                 <>
+
                   <_motion.div
-                    className="absolute top-4 left-4 right-8 bg-white shadow-md rounded-md px-5 py-3 text-sm text-black-600 font-medium"
+                    className="absolute top-4 left-4 right-40 bg-white shadow-md rounded-md px-3 py-1 text-sm text-black-600 font-medium"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
@@ -177,7 +178,7 @@ const AboutUs = () => {
                     100% Natural & Fresh
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-24 left-4 right-8 bg-white shadow-md rounded-md p-4 text-xs text-black-600"
+                    className="absolute bottom-38 left-50 right-2 bg-white shadow-md rounded-md p-2 text-xs text-black-600"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
@@ -186,12 +187,13 @@ const AboutUs = () => {
                     Loved by 10,000+ Home Chefs
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-4 left-4 right-8 flex items-center gap-2 bg-white shadow px-6 py-2 rounded-md text-xs"
+                    className="absolute bottom-1 right-40 bottom-4 left-2 flex items-center gap-2 bg-white shadow px-4 py-1 rounded-md text-xs"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{ delay: 0.3 }}
                   >
+
                     No preservatives, all tradition!
                   </_motion.div>
                 </>
