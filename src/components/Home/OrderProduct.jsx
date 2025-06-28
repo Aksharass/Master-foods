@@ -73,7 +73,7 @@ const OrderProduct = () => {
           </div>
 
           {/* OR Divider */}
-          <div className="relative flex items-center justify-center my-4 sm:my-8">
+          <div className="relative flex items-center justify-center my-10 sm:my-15">
             <div className="h-px bg-gray-300 w-full"></div>
             <div className="absolute bg-[#f9f9f9] px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-gray-300 shadow-md text-black text-base sm:text-lg font-semibold cursor-default hover:scale-105 transition-transform">
               OR
