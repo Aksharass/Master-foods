@@ -65,6 +65,8 @@ const Home = () => {
       description: 'Perfect crispy dosas and fluffy idlis every morning — made with 100% natural ingredients to ensure freshness and authenticity in every bite. Our easy-to-cook batters are delivered straight to your doorstep, completely free from preservatives, making your mornings healthier and hassle-free.',
       ctaText: 'EXPLORE NOW',
       ctaAction: handleExploreNow,
+      ctaSecondary: 'How To Buy',
+      ctaSecondaryLink: '/order',
       image: img3,
     },
     {
@@ -73,6 +75,8 @@ const Home = () => {
       description: 'Soft, lacy-edged appams that are light, fluffy, and naturally fermented to perfection. Crafted with care using traditional methods, our appam batter ensures a wholesome and authentic South Indian breakfast, free from any artificial preservatives.',
       ctaText: 'EXPLORE NOW',
       ctaAction: handleExploreNow,
+      ctaSecondary: 'How To Buy',
+      ctaSecondaryLink: '/order',
       image: img2,
     },
   ];
