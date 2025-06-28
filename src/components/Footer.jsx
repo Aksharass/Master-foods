@@ -86,10 +86,10 @@ const Footer = () => (
             <FaPhone />+91-7708325357
           </li>
           <li className="flex items-center gap-2">
-            <FaEnvelope size={20} className="min-w-[20px]" />masterfoodsshop@gmail.com
+            <FaEnvelope size={15} className="min-w-[15px]" />masterfoodsshop@gmail.com
           </li>
           <li className="flex flex-row items-start gap-2 text-xs">
-            <FaMapMarkerAlt size={30} />
+            <FaMapMarkerAlt size={25} />
             11-119, Thengampazhanji, Athencode, S T Mankadu, Marthandam, Kanyakumari District, Tamil Nadu, India 629172
 
           </li>
