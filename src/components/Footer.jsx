@@ -85,7 +85,7 @@ const Footer = () => (
           <li className="flex items-center gap-2">
             <FaPhone />+91-7708325357
           </li>
-          <li className="flex items-start gap-2">
+          <li className="flex items-start gap-2 text-xs">
             <FaEnvelope />masterfoodsshop@gmail.com
            
           </li>
