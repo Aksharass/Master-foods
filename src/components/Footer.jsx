@@ -85,8 +85,8 @@ const Footer = () => (
           <li className="flex items-center gap-2">
             <FaPhone />+91-7708325357
           </li>
-          <li className="flex items-start gap-2">
-            <FaEnvelope size={14} className="mt-1" />masterfoodsshop@gmail.com
+          <li className="flex items-center gap-2">
+            <FaEnvelope size={20} className="min-w-[20px]" />masterfoodsshop@gmail.com
           </li>
           <li className="flex flex-row items-start gap-2 text-xs">
             <FaMapMarkerAlt size={30} />
