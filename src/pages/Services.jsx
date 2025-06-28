@@ -220,7 +220,7 @@ const Services = () => {
                   {deliveryAreas.map((area, idx) => (
                     <motion_.div
                       key={idx}
-                      className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-8 py-3 rounded text-sm font-medium shadow-sm cursor-pointer text-center flex items-center justify-center ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-2 lg:col-span-1' : ''}`}
+                      className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer text-center flex items-center justify-center ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-2 lg:col-span-1' : ''}`}
                       style={idx === deliveryAreas.length - 1 ? { width: '100%' } : {}}
                       variants={areaVariants}
                       initial="initial"

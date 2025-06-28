@@ -22,7 +22,7 @@ const AboutSection = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative w-60 md:w-80 h-60 md:h-80">
+          <div className="relative w-70 md:w-80 h-70 md:h-80">
             {/* Background image */}
             <div
               className="absolute inset-0 rounded-xl bg-cover bg-center"
