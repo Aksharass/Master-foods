@@ -39,7 +39,7 @@ const Products = () => {
               viewport={{ once: true }}
               className="text-5xl font-extrabold text-black"
             >
-              Dosa / Idly. <br /> South Indian Classic.
+              Dosa / Idly <br /> South Indian Classic
             </_motion.h2>
 
             <p className="mt-4 text-gray-800 text-lg leading-relaxed">
@@ -124,7 +124,7 @@ const Products = () => {
               viewport={{ once: true }}
               className="text-5xl font-extrabold text-black"
             >
-              Appam. <br /> Authentic Taste.
+              Appam <br /> Authentic Taste
             </_motion.h2>
 
             <p className="mt-4 text-gray-800 text-lg leading-relaxed">

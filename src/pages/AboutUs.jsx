@@ -41,7 +41,7 @@ const team = [
     name: "Tinu S S",
     title: "Managing Director",
     img: tenuImg, // Replace with actual image if available
-    desc: "Tinu S S leads our vision and growth, ensuring excellence at every step.",
+    desc: "Tinu leads our vision and growth, ensuring excellence at every step.",
     quote: "Leadership is the ingredient for success."
   },
 
@@ -69,7 +69,7 @@ const AboutUs = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Text Section */}
         <_motion.div
-          className="w-full md:w-1/2 text-left px-20"
+          className="w-full md:w-3/5 text-left px-4 sm:px-8 md:px-20"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -107,22 +107,22 @@ const AboutUs = () => {
             {showMore ? 'READ LESS' : 'READ MORE'}
           </button>
           <_motion.div
-            className="text-center"
+            className="text-center w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-full sm:max-w-4xl mx-auto">
               <_motion.div
                 whileHover={{
                   scale: 1.08,
                   boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white rounded-xl shadow-md p-6 cursor-pointer"
+                className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-black-700">500+</h3>
-                <p className="text-gray-600 mt-2">Happy Customers</p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black-700">500+</h3>
+                <p className="text-gray-600 mt-2 text-sm sm:text-base">Happy Customers</p>
               </_motion.div>
               <_motion.div
                 whileHover={{
@@ -130,10 +130,10 @@ const AboutUs = () => {
                   boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white rounded-xl shadow-md p-6 cursor-pointer"
+                className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-black-700">10+</h3>
-                <p className="text-gray-600 mt-2">Years Experience</p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black-700">10+</h3>
+                <p className="text-gray-600 mt-2 text-sm sm:text-base">Years Experience</p>
               </_motion.div>
               <_motion.div
                 whileHover={{
@@ -141,34 +141,34 @@ const AboutUs = () => {
                   boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white rounded-xl shadow-md p-6 cursor-pointer"
+                className="bg-white rounded-xl shadow-md p-4 sm:p-6 cursor-pointer flex flex-col items-center"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-black-700">100%</h3>
-                <p className="text-gray-600 mt-2">Natural Ingredients</p>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black-700">100%</h3>
+                <p className="text-gray-600 mt-2 text-sm sm:text-base">Natural Ingredients</p>
               </_motion.div>
             </div>
           </_motion.div>
         </_motion.div>
         {/* Image Section */}
         <_motion.div
-          className="relative w-full md:w-1/2 flex justify-center"
+          className="relative w-full md:w-2/5 flex justify-center mt-8 md:mt-0"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="relative w-60 md:w-80 h-60 md:h-80">
+          <div className="relative w-60 sm:w-70 md:w-100 h-60 sm:h-70 md:h-100">
             <div
               className="absolute inset-0 rounded-xl bg-cover bg-center"
               style={{ backgroundImage: `url(${aboutusImg})` }}
               aria-label="Master Batter"
             />
             <AnimatePresence>
-              {isHovered && (
+              {(isHovered || window.innerWidth < 640) && (
                 <>
                   <_motion.div
-                    className="absolute top-4 left-4 right-40 bg-white shadow-md rounded-md px-3 py-1 text-sm text-black-600 font-medium"
+                    className="absolute top-4 left-4 right-4 sm:right-40 bg-white shadow-md rounded-md px-3 py-1 text-sm text-black-600 font-medium"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
@@ -177,7 +177,7 @@ const AboutUs = () => {
                     100% Natural & Fresh
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-38 left-50 right-2 bg-white shadow-md rounded-md p-2 text-xs text-black-600"
+                    className="absolute bottom-24 sm:bottom-38 left-4 sm:left-50 right-2 bg-white shadow-md rounded-md p-2 text-xs text-black-600"
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
@@ -186,7 +186,7 @@ const AboutUs = () => {
                     Loved by 10,000+ Home Chefs
                   </_motion.div>
                   <_motion.div
-                    className="absolute bottom-1 right-40 bottom-4 left-2 flex items-center gap-2 bg-white shadow px-4 py-1 rounded-md text-xs"
+                    className="absolute bottom-4 right-4 sm:right-40 left-4 sm:left-2 flex items-center gap-2 bg-white shadow px-4 py-1 rounded-md text-xs"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
