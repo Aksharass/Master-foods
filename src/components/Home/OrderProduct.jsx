@@ -12,7 +12,7 @@ const OrderProduct = () => {
   };
 
   return (
-    <div className="">
+    <div className="pb-20">
       <div className="text-center pt-20 pb-6 sm:pt-30 sm:pb-10 bg-black text-white">
         <h1 className="text-3xl sm:text-4xl font-bold">Order Our Products</h1>
         <p className="mt-3 sm:mt-4 text-base sm:text-lg max-w-2xl mx-auto">
