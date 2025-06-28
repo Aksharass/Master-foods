@@ -206,35 +206,37 @@ const Services = () => {
             </motion_.div>
 
             <motion_.div
-              className="flex-1"
+              className="flex-1 flex flex-col items-center justify-center w-full"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h4 className="text-lg font-semibold text-black mb-2 pl-4 md:pl-8 lg:pl-12 xl:pl-16">Delivery Areas</h4>
-              <p className="text-sm text-gray-700 mb-4 pl-4 md:pl-8 lg:pl-12 xl:pl-16">
+              <h4 className="text-lg font-semibold text-black mb-2 pl-4 md:pl-8 lg:pl-12 xl:pl-16 text-center w-full">Delivery Areas</h4>
+              <p className="text-sm text-gray-700 mb-4 pl-4 md:pl-8 lg:pl-12 xl:pl-16 text-center w-full">
                 We currently deliver fresh batter to the following areas in Kanyakumari and Thiruvananthapuram:
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                {deliveryAreas.map((area, idx) => (
-                  <motion_.div
-                    key={idx}
-                    className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-2 lg:col-span-1 flex justify-center items-center' : ''}`}
-                    style={idx === deliveryAreas.length - 1 ? { width: '100%' } : {}}
-                    variants={areaVariants}
-                    initial="initial"
-                    whileInView="animate"
-                    whileHover="whileHover"
-                    transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    {area}
-                  </motion_.div>
-                ))}
+              <div className="w-full flex justify-center">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl w-full">
+                  {deliveryAreas.map((area, idx) => (
+                    <motion_.div
+                      key={idx}
+                      className={`bg-gray-200 hover:bg-gray-300 transition-colors duration-300 text-black px-4 py-2 rounded text-sm font-medium shadow-sm cursor-pointer text-center flex items-center justify-center ${idx === deliveryAreas.length - 1 ? 'col-span-2 md:col-span-2 lg:col-span-1' : ''}`}
+                      style={idx === deliveryAreas.length - 1 ? { width: '100%' } : {}}
+                      variants={areaVariants}
+                      initial="initial"
+                      whileInView="animate"
+                      whileHover="whileHover"
+                      transition={{ duration: 0.3, delay: idx * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      {area}
+                    </motion_.div>
+                  ))}
+                </div>
               </div>
 
               <motion_.div
-                className="mt-6 border border-black-300 text-red-700 text-sm p-4 rounded shadow-sm"
+                className="mt-6 border border-black-300 text-red-700 text-sm p-4 rounded shadow-sm text-center w-full"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
