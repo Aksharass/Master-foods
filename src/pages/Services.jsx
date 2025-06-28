@@ -178,9 +178,9 @@ const Services = () => {
             ))}
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 justify-center items-start">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-stretch w-full">
             <motion_.div
-              className="bg-black text-white p-5 sm:p-8 rounded-xl w-full lg:max-w-sm shadow-md mb-4 lg:mb-0"
+              className="bg-black text-white p-5 sm:p-8 rounded-xl w-full sm:max-w-xs shadow-md mb-4 sm:mb-0 flex-shrink-0"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
