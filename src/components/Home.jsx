@@ -80,7 +80,7 @@ const Home = () => {
   return (
     <div className="">
       {/* Carousel Section */}
-      <section id="home" className="relative w-full bg-white pb-4 pt-8 sm:pt-20 md:pb-0 group px-3 sm:px-0">
+      <section id="home" className="relative w-full bg-white pt-8 sm:pt-20 md:pb-0 group px-3 sm:px-0">
         {/* Master Heading and Single Animated Standard Point - with background animation */}
         <div className="relative w-full flex flex-col items-center justify-center z-10 overflow-hidden pt-12 pb-10 sm:pt-4 sm:pb-4 md:pt-4 md:pb-4 lg:pt-4 lg:pb-4">
           {/* Animated balls background for Master content */}
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
           <h1 className="relative z-10 text-4xl sm:text-4xl md:text-5xl font-extrabold text-black mb-2 drop-shadow-md animate-fadeInText" style={{ fontFamily: 'Times New Roman, Times, serif' }}>Master</h1>
           <div className="relative z-10 max-w-2xl text-center">
-            <p className="text-base sm:text-lg text-gray-700 animate-slideInUp">
+            <p className="text-sm sm:text-sm md:text-lg text-gray-700 animate-slideInUp">
               Fresh, preservative-free South Indian batters made daily with authentic recipes and natural ingredients.
             </p>
           </div>
