@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-6 py-3 bg-white fixed w-full z-20 shadow-md">
+    <nav className="flex justify-between items-center px-6 py-3 bg-black fixed w-full z-20 shadow-md">
       <img src={logo} alt="Master Logo" className="h-10 px-3" />
 
       {/* Desktop Menu */}
@@ -26,14 +26,14 @@ const Navbar = () => {
             <li key={idx} className="flex items-center px-3">
               <Link
                 to={item.path}
-                className="relative text-black hover:text-gray-500 transition duration-300 group"
+                className="relative text-white hover:text-gray-500 transition duration-300 group"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 h-[2px] bg-gray-500 w-0 group-hover:w-full transition-all duration-300 ease-in-out" />
               </Link>
 
               {idx < navItems.length - 1 && (
-                <span className="text-black select-none pl-5 pr-1">/</span>
+                <span className="text-white select-none pl-5 pr-1">/</span>
               )}
             </li>
           ))}
@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setIsSidebarOpen(true)} aria-label="Open Menu">
-          <FaBars className="text-2xl text-black hover:text-gray-500 transition" />
+          <FaBars className="text-2xl text-white   hover:text-gray-500 transition" />
         </button>
       </div>
 
