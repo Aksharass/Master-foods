@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion as _motion} from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; // <-- Add this import
 import dosaImg from '../../assets/dosa.png';
 import appamImg from '../../assets/appam.png';
 
 const ProductsSection = () => {
+  const navigate = useNavigate(); // <-- Add this line
+
   const products = [
     {
       name: 'Dosa / Idly Batter',
@@ -30,7 +33,7 @@ const ProductsSection = () => {
         {products.map((product, idx) => (
           <_motion.div
             key={idx}
-            className="flex flex-col items-center bg-white shadow-md rounded-xl p-2 md:p-2" // reduced padding here
+            className="flex flex-col items-center bg-white shadow-md rounded-xl p-2 md:p-2"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
@@ -50,7 +53,10 @@ const ProductsSection = () => {
               {product.description}
             </p>
             <div className="mt-4 flex flex-row items-center gap-2 sm:gap-4">
-              <button className="text-black font-medium hover:underline text-sm sm:text-base">
+              <button
+                className="bg-black text-white font-medium text-sm sm:text-base px-4 py-2 rounded hover:bg-gray-700 transition-colors"
+                onClick={() => navigate('/order')}
+              >
                 Buy Now
               </button>
               <span className='border-l border-black h-5 mx-2'></span>
