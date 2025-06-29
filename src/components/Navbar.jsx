@@ -56,7 +56,7 @@ const Navbar = () => {
         } transition-all duration-1500 ease-in-out shadow-md`}
       >
         <div className="flex justify-between items-center p-3 border-b border-black/20">
-          <h2 className="text-lg font-semibold">Menu</h2>
+          <img src={logo} alt="Master Logo" className="h-10 px-3" />
           <button onClick={() => setIsSidebarOpen(false)} aria-label="Close Menu">
             <FaTimes className="text-xl text-white hover:text-gray-700 transition" />
           </button>
