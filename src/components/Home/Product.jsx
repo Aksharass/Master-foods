@@ -24,7 +24,7 @@ const ProductsSection = () => {
   ];
 
   return (
-    <section className="py-14 md:py-20 bg-white text-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-0">
+    <section className="py-14 md:py-20  text-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-0">
       <h2 className="text-2xl md:text-5xl font-bold mb-10 px-4">Our Products</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-6xl mx-auto px-4 md:px-0">
         {products.map((product, idx) => (

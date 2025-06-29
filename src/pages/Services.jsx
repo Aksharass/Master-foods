@@ -93,7 +93,7 @@ const areaVariants = {
 
 const Services = () => {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-gray-50 to-gray-200">
       <div className="text-center pt-30 pb-10 bg-black text-white">
         <h1 className="text-4xl font-bold">Our Services</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ const Services = () => {
         </p>
       </div>
 
-      <section className="py-16 bg-white text-center" id="services">
+      <section className="py-16  text-center" id="services">
         <div className="container mx-auto px-4 max-w-6xl">
           {/* Added heading and content */}
           <h2 className="text-4xl font-bold mb-2 text-black">What We Offer</h2>

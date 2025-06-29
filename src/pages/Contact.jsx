@@ -52,7 +52,7 @@ const Contact = () => {
     };
 
     return (
-        <div>
+        <div className='bg-gradient-to-r from-gray-50 to-gray-200'>
             {/* Header */}
             <div className="text-center pt-30 pb-10 bg-black text-white">
                 <h2 className="text-4xl font-bold">

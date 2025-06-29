@@ -82,9 +82,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="overflow-x-hidden w-full">
+    <div className="overflow-x-hidden w-full bg-gradient-to-r from-gray-50 to-gray-200">
       {/* Carousel Section */}
-      <section id="home" className="relative w-full bg-white pt-8 sm:pt-20 md:pb-0 group px-3 sm:px-0 overflow-x-hidden">
+      <section id="home" className="relative w-full  pt-8 sm:pt-20 md:pb-0 group px-3 sm:px-0 overflow-x-hidden">
         {/* Master Heading and Single Animated Standard Point - with background animation */}
         <div className="relative w-full flex flex-col items-center justify-center z-10 overflow-hidden pt-12 pb-10 sm:pt-4 sm:pb-4 md:pt-4 md:pb-4 lg:pt-4 lg:pb-4">
           {/* Animated balls background for Master content */}

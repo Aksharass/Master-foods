@@ -67,7 +67,7 @@ const WhatWeOffer = () => {
   return (
     <>
       {/* What We Offer Section */}
-      <section className="bg-white py-15">
+      <section className=" py-15">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <motion_.h2
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
@@ -120,7 +120,7 @@ const WhatWeOffer = () => {
       </section>
 
       {/* Quality Assurance Section */}
-      <section className="py-5 bg-white">
+      <section className="py-5">
         <div className="max-w-6xl mx-auto px-4">
           <motion_.div
             className="bg-black rounded-xl shadow-lg p-8"

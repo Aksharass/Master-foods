@@ -76,7 +76,7 @@ const Testimonials = () => {
 
     return (
         <section
-            className="bg-white py-20 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-0"
+            className=" py-20 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-0"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

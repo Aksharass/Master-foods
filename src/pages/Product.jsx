@@ -15,7 +15,7 @@ const Products = () => {
   const navigate = useNavigate(); // Initialize navigate
 
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-gray-50 to-gray-200">
       {/* Product Page Header */}
       <div className="text-center pt-30 pb-10 bg-black text-white">
         <h1 className="text-4xl font-bold">Our Products</h1>
@@ -24,7 +24,7 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="bg-white px-2 md:px-6 md:py-4 space-y-24 md:space-y-32">
+      <div className=" px-2 md:px-6 md:py-4 space-y-24 md:space-y-32">
 
         {/* ======= DOSA / IDLY BATTER PROMO ======= */}
         <div className="md:flex items-center gap-6 md:gap-10 lg:gap-20 px-2 md:px-8 lg:px-16">

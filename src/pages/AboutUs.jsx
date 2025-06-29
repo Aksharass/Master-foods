@@ -57,7 +57,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="">
+    <div className="min-h-screen bg-gradient-to-r from-gray-50 to-gray-200">
       <div className="text-center pt-30 pb-15 bg-black text-white">
         <h1 className="text-4xl font-bold">About Us</h1>
         <p className="mt-4 text-lg max-w-2xl mx-auto">

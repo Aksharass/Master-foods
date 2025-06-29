@@ -153,7 +153,7 @@ const Testimonials = () => {
     const viewLess = () => setVisibleCount(INITIAL_COUNT);
 
     return (
-        <div className="">
+        <div className="bg-gradient-to-r from-gray-50 to-gray-200">
       <div className="bg-black text-white text-center pt-30 pb-15">
         <h1 className="text-4xl font-bold mb-4">Our Story</h1>
         <p className="text-lg max-w-2xl mx-auto">
@@ -162,7 +162,7 @@ const Testimonials = () => {
       </div>
 
         <section
-            className="py-9 px-6 md:px-20 relative overflow-hidden bg-white">
+            className="py-9 px-6 md:px-20 relative overflow-hidden">
             <style>
                 {`
           @keyframes gradientMove {
