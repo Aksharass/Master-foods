@@ -140,7 +140,7 @@ const AboutSection = () => {
                 }}
                 className="bg-white rounded-xl shadow-md p-6 cursor-pointer"
               >
-                <h3 className="text-3xl md:text-4xl font-bold text-black-700">10+</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-black-700">5+</h3>
                 <p className="text-gray-600 mt-2">Years Experience</p>
               </motion_.div>
               <motion_.div
