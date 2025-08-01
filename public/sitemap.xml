@@ -21,39 +21,28 @@
   </url>
 
   <url>
-    <loc>https://masterfoods.in/contact</loc>
+    <loc>https://masterfoods.in/services</loc>
     <lastmod>2025-08-01</lastmod>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://masterfoods.in/cart</loc>
+    <loc>https://masterfoods.in/testimonials</loc>
+    <lastmod>2025-08-01</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://masterfoods.in/contact</loc>
     <lastmod>2025-08-01</lastmod>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://masterfoods.in/checkout</loc>
+    <loc>https://masterfoods.in/order</loc>
     <lastmod>2025-08-01</lastmod>
     <priority>0.70</priority>
   </url>
 
-  <url>
-    <loc>https://masterfoods.in/faq</loc>
-    <lastmod>2025-08-01</lastmod>
-    <priority>0.60</priority>
-  </url>
-
-  <url>
-    <loc>https://masterfoods.in/privacy-policy</loc>
-    <lastmod>2025-08-01</lastmod>
-    <priority>0.50</priority>
-  </url>
-
-  <url>
-    <loc>https://masterfoods.in/terms-and-conditions</loc>
-    <lastmod>2025-08-01</lastmod>
-    <priority>0.50</priority>
-  </url>
-
+ 
 </urlset>
